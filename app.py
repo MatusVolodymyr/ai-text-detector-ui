@@ -598,7 +598,7 @@ if st.session_state.analysis_result is not None:
             )
 
         with col6:
-            humanizer_res = ("Yes" if is_humanized else "No") + (f" ({humanizer_prob:.1f}%)" if is_humanized else "")
+            humanizer_res = ("Yes" if is_humanized else "No") + (f" ({humanizer_prob:.1f}%)")
             st.markdown(
                 f"""
             <div class="metric-card">
