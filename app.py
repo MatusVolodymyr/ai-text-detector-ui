@@ -473,7 +473,7 @@ if st.session_state.analysis_result is not None:
     overall_prob = result.get("ai_probability", 0)
     is_ai = result.get("is_ai", False)
     is_humanized = result.get("is_humanized", False)
-    humanizer_prob = result.get("humanizer_probability", 0) * 100
+    humanizer_prob = (result.get("humanizer_probability") or 0) * 100
 
     if is_ai:
         result_emoji = "🤖"
